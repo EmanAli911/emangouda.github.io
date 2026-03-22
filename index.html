@@ -1,210 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eman Gouda, Ph.D - Alexandria University</title>
-  <style>
-    :root {
-      --primary-color: #2c3e50;
-      --secondary-color: #3498db;
-      --accent-color: #2980b9;
-      --text-color: #333;
-      --light-gray: #f5f5f5;
-      --border-color: #ddd;
-    }
-    
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      max-width: 900px; 
-      margin: auto; 
-      line-height: 1.7;
-      color: var(--text-color);
-      padding: 20px;
-      background-color: #fff;
-    }
-    
-    h1, h2 { 
-      color: var(--primary-color); 
-    }
-    
-    h1 { 
-      margin-bottom: 5px; 
-      font-size: 2.2em;
-      border-bottom: 2px solid var(--secondary-color);
-      padding-bottom: 10px;
-    }
-    
-    h2 {
-      border-left: 4px solid var(--secondary-color);
-      padding-left: 15px;
-      margin-top: 30px;
-    }
-    
-    h3 { 
-      color: #555; 
-      margin-top: 0; 
-      font-weight: normal;
-      font-size: 1.2em;
-    }
-    
-    a { 
-      color: var(--accent-color); 
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    a:hover {
-      color: var(--primary-color);
-      text-decoration: underline;
-    }
-    
-    nav { 
-      background-color: var(--light-gray);
-      padding: 15px;
-      border-radius: 5px;
-      margin: 20px 0;
-    }
-    
-    nav a { 
-      margin-right: 20px; 
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 3px;
-    }
-    
-    nav a:hover {
-      background-color: var(--secondary-color);
-      color: white;
-      text-decoration: none;
-    }
-    
-    section { 
-      margin-bottom: 40px; 
-      padding: 20px;
-      background-color: white;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .contact-info {
-      background-color: var(--light-gray);
-      padding: 15px;
-      border-radius: 5px;
-      margin: 15px 0;
-    }
-    
-    .course-list {
-      list-style-type: none;
-      padding: 0;
-    }
-    
-    .course-list li {
-      margin-bottom: 15px;
-      padding: 10px;
-      border-left: 3px solid var(--secondary-color);
-      background-color: var(--light-gray);
-    }
-    
-    .research-interest {
-      background-color: #e8f4fc;
-      padding: 15px;
-      border-radius: 5px;
-      margin: 20px 0;
-      border-left: 4px solid var(--accent-color);
-    }
-    
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      color: #777;
-      border-top: 1px solid var(--border-color);
-    }
-    
-    @media (max-width: 768px) {
-      body {
-        padding: 10px;
-      }
-      
-      nav a {
-        display: block;
-        margin: 5px 0;
-      }
-      
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Eman Gouda | Lecturer @ Alexandria University</title>
+    <!-- Google Fonts & simple reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fefefe;
+            color: #1a1a1a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header / nav */
+        .site-header {
+            padding: 28px 0 16px 0;
+            border-bottom: 1px solid #eaeaea;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(255,255,255,0.96);
+            backdrop-filter: blur(4px);
+        }
+
+        .nav-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 20px;
+        }
+
+        .logo-area {
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: -0.3px;
+        }
+
+        .logo-area a {
+            text-decoration: none;
+            color: #111;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e66;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0f3b7a;
+            text-decoration: underline;
+        }
+
+        /* main layout */
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin: 48px 0 32px 0;
+        }
+
+        .profile-photo {
+            flex: 0 0 180px;
+        }
+
+        .avatar-placeholder {
+            width: 160px;
+            height: 160px;
+            background: linear-gradient(135deg, #2b5e5c, #1f7a6b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.8rem;
+            font-weight: 500;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+            text-transform: uppercase;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-info h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #1f6e6b;
+            margin: 0.5rem 0 0.25rem;
+        }
+
+        .dept {
+            font-size: 1rem;
+            color: #3a6b68;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            margin: 1rem 0 0.8rem;
+            font-size: 0.95rem;
+            color: #2d3748;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .email {
+            font-family: monospace;
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 24px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            margin-right: 18px;
+            font-weight: 500;
+            color: #2563eb;
+            font-size: 0.9rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .bio-text {
+            margin-top: 1rem;
+            line-height: 1.6;
+            color: #2c3e50;
+            text-align: justify;
+        }
+
+        /* section styles */
+        .section {
+            margin: 48px 0 40px;
+            scroll-margin-top: 90px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            border-left: 5px solid #1f7a6b;
+            padding-left: 18px;
+            margin-bottom: 24px;
+            letter-spacing: -0.3px;
+        }
+
+        .news-list, .talks-list, .awards-list {
+            list-style: none;
+        }
+
+        .news-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #edf2f7;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .news-date {
+            font-weight: 600;
+            min-width: 95px;
+            color: #1f6e6b;
+        }
+
+        .news-text {
+            flex: 1;
+        }
+
+        /* research interests */
+        .research-blurb {
+            background: #f8fafc;
+            padding: 1.4rem 1.8rem;
+            border-radius: 20px;
+            margin-bottom: 24px;
+            border-left: 4px solid #1f7a6b;
+        }
+
+        .pub-links {
+            margin: 12px 0 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .pub-links a {
+            font-size: 0.85rem;
+            background: #eef2ff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            color: #1e3a8a;
+        }
+
+        .paper-item {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eef2ff;
+        }
+
+        .paper-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0f172a;
+        }
+
+        .paper-authors {
+            font-size: 0.85rem;
+            color: #475569;
+            margin: 6px 0 4px;
+        }
+
+        .paper-venue {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #2c5282;
+        }
+
+        .year-group {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin: 24px 0 16px 0;
+            color: #1e5f5a;
+            border-bottom: 2px solid #dce5f0;
+            display: inline-block;
+            padding-right: 12px;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-top: 20px;
+        }
+
+        .team-category {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .team-category h3 {
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .team-list {
+            list-style: none;
+        }
+
+        .team-list li {
+            margin-bottom: 8px;
+        }
+
+        .alumni-list {
+            margin-top: 12px;
+        }
+
+        .teaching-course {
+            margin: 12px 0;
+            background: #f9f9fb;
+            padding: 8px 14px;
+            border-radius: 28px;
+            display: inline-block;
+            margin-right: 12px;
+            margin-bottom: 12px;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .service-badge {
+            background: #eef2ff;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+        }
+
+        .contact-block {
+            background: #f4f9f8;
+            padding: 1.2rem 1.8rem;
+            border-radius: 24px;
+            margin-top: 24px;
+        }
+
+        footer {
+            margin: 60px 0 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+            padding-top: 24px;
+        }
+
+        @media (max-width: 700px) {
+            .nav-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .contact-info {
+                justify-content: center;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Eman Gouda, Ph.D.</h1>
-    <h3>Lecturer, Department of Mathematics and Computer Science<br>Alexandria University, Egypt</h3>
-    
-    <div class="contact-info">
-      <p><strong>Email:</strong> <a href="mailto:eman_ali3@alexu.edu.eg">eman_ali3@alexu.edu.eg</a></p>
+<header class="site-header">
+    <div class="container nav-bar">
+        <div class="logo-area">
+            <!-- <a href="#">Eman Gouda</a> -->
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#courses">Teaching</a>
+            <a href="#contact">Contact</a>
+        </div>
     </div>
-    
-    <nav>
-      <a href="#bio">Bio</a>
-      <a href="#research">Research</a>
-      <a href="#courses">Courses</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+</header>
 
-  <section id="bio">
-    <h2>About Me</h2>
-    <p>👋 Hello! I'm Eman Gouda, a lecturer in the Department of Mathematics and Computer Science at Alexandria University.
-    My passion lies in advancing the frontiers of computer vision, with a particular focus on <strong>multi-modal adaptation</strong>. </p>
-    
-    <p>🌟 Beyond my research, I’m passionate about inspiring others through teaching. I have taught programming, artificial intelligence, and computer vision
-      to undergraduate and graduate students, helping them build strong foundations in these fields.</p>
-  </section>
+<main class="container">
+    <!-- About / profile section -->
+    <section id="about" class="profile-section">
+        <div class="profile-photo">
+            <div class="avatar-placeholder">EG</div>
+        </div>
+        <div class="profile-info">
+            <h1>Eman Gouda, Ph.D.</h1>
+            <div class="title">Assistant Professor</div>
+            <div class="dept">Department of Mathematics and Computer Science, Alexandria University, Egypt</div>
+            <div class="contact-info">
+                <span class="email">eman_ali3@alexu.edu.eg</span>
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?user=HrWE7U4AAAAJ&hl=en">Google Scholar</a>
+                    <a href="https://github.com/Externalhappy">GitHub</a>
+                </div>
+            </div>
+            <div class="bio-text">
+                Eman Gouda is an Assistant Professor in the Department of Mathematics and Computer Science at Alexandria University. She received her PhD in Computer Vision from the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI). Her research interests lie in machine learning and computer vision, with a particular focus on multi-modal adaptation and unsupervised learning. In addition to her research, she contributes to the academic community through peer review and service roles for leading conferences such as CVPR, ECCV, and NeurIPS. 
+            </div>
+        </div>
+    </section>
 
-  <section id="research">
-    <h2>Research Interests</h2>
-    <div class="research-interest">
-      <ul>
-        <li><strong>Computer Vision</strong> - Multi-modal learning and adaptation</li>
-        <li><strong>Machine Learning</strong> - Domain adaptation and transfer learning</li>
-        <li><strong>Artificial Intelligence</strong> - Cross-modal understanding and generation</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Research Interests -->
+    <section id="research" class="section">
+        <h2 class="section-title">Research Interests</h2>
+        Generally interested in machine learning and computer vision, with a goal of building general-purpose intelligence that can see, reason, and act reliably in the unpredictable world. My current research focuses on vision-language models, multi-modal adaptation, and unsupervised learning frameworks, with a particular interest in enhancing the scalability and accuracy of foundational models.
+        </div>
 
-  <section id="courses">
-    <h2>Courses I Teach</h2>
-    <ul class="course-list">
-      <li>
-        <a href="https://github.com/EmanAli911/computer-vision"><strong>Computer Vision</strong></a>
-      </li>
-      <li>
-        <a href="https://github.com/EmanAli911/Database-Systems"><strong>Database Systems</strong></a>
-      </li>
-      <li>
-        <a href="https://github.com/EmanAli911/Database-Systems"><strong>Neural Networks</strong></a>
-      </li>
-      <li>
-        <a href="https://github.com/EmanAli911/Database-Systems"><strong>Information Retrieval</strong></a>
-      </li>
-      <li>
-        <a href="https://github.com/EmanAli911/artificial-intelligence"><strong>Artificial Intelligence</strong></a>
-      </li>
-      <li>
-        <a href="https://github.com/EmanAli911/mobile-development"><strong>Mobile Development</strong></a>
-      </li>
-    </ul>
-  </section>
-  
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Feel free to reach out for collaborations or research discussions:</p>
-    <div class="contact-info">
-      <p><strong>Email:</strong> <a href="mailto:eman_ali3@alexu.edu.eg">eman_ali3@alexu.edu.eg</a></p>
-    </div>
-  </section>
+        <!-- Optional: Recent publications placeholder - You can provide actual papers if desired -->
+        <div class="publications-list">
+            <div class="year-group">Selected Recent Work</div>
+            <div class="paper-item">
+                <div class="paper-title">Towards Fine-Grained Adaptation of CLIP via a Self-Trained Alignment Score</div>
+                <div class="paper-authors">Eman Ali, Sathira Silva, Chetan Arora, Muhammad Haris Khan</div>
+                <div class="paper-venue">WACV 2026</div>
+            </div>
+            <div class="paper-item">
+                <div class="paper-title">DPA: Dual prototypes alignment for unsupervised adaptation of vision-language models</div>
+                <div class="paper-authors">Eman Ali, Sathira Silva, Muhammad Haris Khan</div>
+                <div class="paper-venue">WACV 2025</div>
+            </div>
+            <div class="paper-item">
+                <div class="paper-title">Noise-tolerant few-shot unsupervised adapter for vision-language models</div>
+                <div class="paper-authors">Eman Ali, Muhammad Haris Khan</div>
+                <div class="paper-venue">BMVA 2024</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses I Teach (Teaching section) -->
+    <section id="courses" class="section">
+        <h2 class="section-title">Teaching</h2>
+        <div>
+            <span class="teaching-course">Computer Vision</span>
+            <span class="teaching-course">Database Systems</span>
+            <span class="teaching-course">Neural Networks</span>
+            <span class="teaching-course">Information Retrieval</span>
+            <span class="teaching-course">Artificial Intelligence</span>
+            <span class="teaching-course">Mobile Development</span>
+        </div>
+    </section>
+
+    <!-- Contact Section (explicit) -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact & Collaboration</h2>
+        <div class="contact-block">
+            <p>Feel free to reach out for collaborations, research discussions, or supervision inquiries:</p>
+            <p style="margin-top: 12px;">📧 <strong>Email:</strong> <a href="mailto:eman_ali3@alexu.edu.eg" style="color:#1f7a6b;">eman_ali3@alexu.edu.eg</a></p>
+            <p>📍 Department of Mathematics and Computer Science, Alexandria University, Egypt</p>
+            <p>🔬 <strong>Research interests:</strong> Multi-modal learning, domain adaptation, vision-language models, and responsible AI.</p>
+            <div style="margin-top: 16px;">
+                <a href="#" style="margin-right: 20px; text-decoration: none; color: #2c5f8a;">Google Scholar</a>
+                <a href="#" style="margin-right: 20px; text-decoration: none; color: #2c5f8a;">GitHub</a>
+                <a href="#" style="text-decoration: none; color: #2c5f8a;">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
